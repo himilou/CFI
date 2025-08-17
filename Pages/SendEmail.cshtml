@@ -1,0 +1,26 @@
+﻿@page
+@model CFI.Pages.SendEmailModel
+@using System.Net.Mail
+@{
+}
+
+<section id="mail" class="main special">
+    <div class="container">
+        <div class="content">
+        @if(Model.mailSent)
+        {
+            <h4>Thanks!</h4>
+           <p>@Model.Name Your message has been sent.</p>
+           <p>We will be in contact shortly.</p>
+        }
+        else
+        {
+            <h4>Error sending message</h4>
+           <p>@Model.Name There was a problem sending your message.<br/>
+           Please try again or email us directly at @Model.smtpuser.    
+           </p>
+        }
+        <a href="Index" class="button primary scrolly">Home</a>
+        </div>
+    </div>
+</section>

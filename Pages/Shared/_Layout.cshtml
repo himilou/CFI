@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FlyMeToAtp Flight Instruction</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>@ViewData["Title"] = FlyMeToAtp</title>
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <header class="major">
+            <h1>Fly Me To Atp</h1>
+            <p>Learn To Fly!</a></p>
+            <p>Private - Commercial - Flight Instruction</p>
+        </header>
+    </section>
+  @*  following is the bootstrap menubar 
+      <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">CFI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> *@
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <section id="footer">
+        <div class="container">
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <form method="post" asp-page="SendEmail">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall"><input type="text" name="Name" id="name" placeholder="Your name" /></div>
+                    <div class="col-6 col-12-xsmall"><input type="email" name="Email" id="email" placeholder="Your email" /></div>
+                    <div class="col-12"><textarea name="Message" id="message" placeholder="Your message" rows="4"></textarea></div>
+                    <div class="col-12">
+                        <ul class="actions special">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+       @*      <ul class="icons">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul> *@
+            <ul class="copyright">
+                <li> &copy; 2025 - FlyMeToAtp - </li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
+            </ul>
+        </footer>
+    </section>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+@* 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> 
+     <script src="~/assets/js/jquery.min.js"></script>
+*@
+
+   
+    <script src="~/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/assets/js/jquery.scrolly.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
